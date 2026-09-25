@@ -1,0 +1,8 @@
+Sales Summary
+----------------------------
+Total Sales: $1,725.00
+
+Details:
+sales-01.txt: $550.00
+sales-02.txt: $575.00
+sales-03.txt: $600.00
