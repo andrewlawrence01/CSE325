@@ -1,46 +1,41 @@
-// CSE 325 - Write Your First C# Code
 
-Console.WriteLine("Hello, World!");
+using System;
+
+// Display a welcome message
+Console.WriteLine(new string('-', 35));
+Console.WriteLine("Welcome to the C# Greeting Program!");
+Console.WriteLine(new string('-', 35));
 Console.WriteLine();
 
-// Variables and data types
-string firstName = "Andrew";
-int age = 25;
-decimal accountBalance = 1250.75m;
-bool isStudent = true;
+// Ask for the user's name
+Console.Write("What is your name? ");
+string name = Console.ReadLine() ?? "";
 
-// Display variable values
-Console.WriteLine($"Name: {firstName}");
-Console.WriteLine($"Age: {age}");
-Console.WriteLine($"Account Balance: {accountBalance:C}");
-Console.WriteLine($"Student: {isStudent}");
+// Ask for the user's age
+Console.Write("How old are you? ");
+string age = Console.ReadLine() ?? "";
+
+// Display a personalized greeting
 Console.WriteLine();
+Console.WriteLine($"Hello, {name}! It's great to meet you.");
+Console.WriteLine($"You are {age} years old.");
 
-// Arithmetic
-int firstNumber = 10;
-int secondNumber = 5;
-
-Console.WriteLine($"Addition: {firstNumber + secondNumber}");
-Console.WriteLine($"Subtraction: {firstNumber - secondNumber}");
-Console.WriteLine($"Multiplication: {firstNumber * secondNumber}");
-Console.WriteLine($"Division: {firstNumber / secondNumber}");
+// Demonstrate string methods
 Console.WriteLine();
+Console.WriteLine("--- String Manipulation ---");
+Console.WriteLine($"Uppercase: {name.ToUpper()}");
+Console.WriteLine($"Lowercase: {name.ToLower()}");
+Console.WriteLine($"Name length: {name.Length}");
+Console.WriteLine($"Name with 'a' replaced by '@': {name.Replace("a", "@")}");
 
-// Conditional statement
-if (age >= 18)
-{
-    Console.WriteLine($"{firstName} is an adult.");
-}
-else
-{
-    Console.WriteLine($"{firstName} is a minor.");
-}
-
-// Loop
+// Demonstrate escape characters
 Console.WriteLine();
-Console.WriteLine("Counting:");
+Console.WriteLine("--- Formatted Information ---");
+Console.WriteLine($"Name:\t{name}");
+Console.WriteLine($"Age:\t{age}");
+Console.WriteLine("Thank you for trying this program!\n");
 
-for (int i = 1; i <= 5; i++)
-{
-    Console.WriteLine(i);
-}
+// Display a closing message
+Console.WriteLine(new string('-', 35));
+Console.WriteLine("End of Program");
+Console.WriteLine(new string('-', 35));
